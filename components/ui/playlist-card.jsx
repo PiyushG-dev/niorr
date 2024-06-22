@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpotify, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import ShineBorder from "./shine-border";
+import Link from "next/link";
 
 const PlaylistCard = ({ card, song, youtube, spotify }) => {
   return (
@@ -11,14 +12,30 @@ const PlaylistCard = ({ card, song, youtube, spotify }) => {
         className="text-center text-2xl font-bold capitalize"
         color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
       >
-        <Image src={card} className="rounded-md" />
+        <Link href={youtube}>
+          <Image src={card} className="rounded-md" />
+        </Link>
       </ShineBorder>
       <div className="flex justify-between">
         <p className="font-light text-gray-300">{song}</p>
-        <div className="flex gap-2">
-          <FontAwesomeIcon icon={faSpotify} className="w-6 text-[#21D760]" />
-          <FontAwesomeIcon icon={faYoutube} className="w-7 text-[#ED2526]" />
-        </div>
+        <ul className="flex gap-2">
+          <li>
+            <Link href={spotify}>
+              <FontAwesomeIcon
+                icon={faSpotify}
+                className="w-6 text-[#21D760]"
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href={youtube}>
+              <FontAwesomeIcon
+                icon={faYoutube}
+                className="w-7 text-[#ED2526]"
+              />
+            </Link>
+          </li>
+        </ul>
       </div>
     </div>
   );

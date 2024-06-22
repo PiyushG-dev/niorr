@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 
 const ContactInfo = () => {
   return (
-    <section>
+    <section id="contact">
       <div className="screen-inner-width py-14 px-5 sm:px-10 flex flex-col gap-10 xs:px-5">
         {/* <div className="text-center text-lg flex flex-col gap-5">
           <p>

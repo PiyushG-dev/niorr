@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Artists = () => {
   return (
@@ -30,7 +31,9 @@ const Artists = () => {
               Handpicked young and bright stars from niorr and crew.
             </h3>
           </div>
-          <Button size="lg">Book an artist</Button>
+          <Button size="lg" asChild>
+            <Link href="#contact">Book an artist</Link>
+          </Button>
         </div>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-1">
           {artists.map((item) => {

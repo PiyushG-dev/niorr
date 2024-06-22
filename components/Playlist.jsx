@@ -32,7 +32,7 @@ const Playlist = () => {
             </h3>
           </div>
           <Button size="lg" asChild>
-            <Link href="">Contact us</Link>
+            <Link href="#contact">Contact us</Link>
           </Button>
         </div>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-1">
