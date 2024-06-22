@@ -70,7 +70,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="w-3/5 py-10 px-10 bg-quinary lg:w-4/5 md:w-full sm:px-3 sm:py-5"
+      className="py-10 px-10 bg-gray-950 sm:px-3 sm:py-5 rounded-lg"
     >
       <div className="flex flex-col items-start gap-5">
         <FormField
@@ -101,7 +101,7 @@ const Form = () => {
         <FormField
           label="Venue"
           type="text"
-          placeholder="Jaipur"
+          placeholder="IIT Guwahati"
           name="venue"
           register={register}
           error={errors.venue}
@@ -114,24 +114,25 @@ const Form = () => {
           error={errors.date}
         />
         <div className="flex flex-col gap-1">
-          <h3 className="font-Marcellus text-sm">
-            What services are you interested in ?
+          <h3 className="text-sm">
+            What are you looking for?{" "}
+            <span className="text-red-500 text-sm">*</span>
           </h3>
           <div className="flex flex-col gap-2">
             <FormOption
               validateOptions={validateOptions}
               register={register}
-              label="Full service planning"
+              label="Book an artist for a live show"
             />
             <FormOption
               validateOptions={validateOptions}
               register={register}
-              label="Partial Planning"
+              label="Brand sponsorship / endorsement"
             />
             <FormOption
               validateOptions={validateOptions}
               register={register}
-              label="Event Management"
+              label="Joining niorr and team"
             />
             <FormOption
               validateOptions={validateOptions}
@@ -145,7 +146,7 @@ const Form = () => {
             </span>
           )}
         </div>
-        <Button disabled={isSubmitting} variant="form">
+        <Button disabled={isSubmitting} size="lg">
           {isSubmitting ? "sending" : "Send"}
         </Button>
       </div>

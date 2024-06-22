@@ -12,7 +12,7 @@ const FormOption = ({ register, label, validateOptions }) => {
           validate: validateOptions,
         })}
       />
-      <span className="font-Marcellus">{label}</span>
+      <span>{label}</span>
     </label>
   );
 };

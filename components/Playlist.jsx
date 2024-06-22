@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Playlist = () => {
   return (
@@ -30,7 +31,9 @@ const Playlist = () => {
               We are a record label created by artists, for artists.
             </h3>
           </div>
-          <Button size="lg">Contact us</Button>
+          <Button size="lg" asChild>
+            <Link href="">Contact us</Link>
+          </Button>
         </div>
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-1">
           {playlist.map((item) => {

@@ -1,5 +1,5 @@
 import React from "react";
-// import Form from "./Form";
+import Form from "./Form";
 import AnimatedGradientText from "./ui/animated-gradient-text";
 import { ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -38,7 +38,7 @@ const ContactInfo = () => {
           </div>
           <p className="underline cursor-pointer">niorr.official@gmail.com</p>
         </div>
-        {/* <Form /> */}
+        <Form />
       </div>
     </section>
   );

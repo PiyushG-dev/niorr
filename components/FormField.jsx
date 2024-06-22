@@ -27,18 +27,28 @@ const FormField = ({
 
   return (
     <div className="flex flex-col gap-1 w-full">
-      <label className="font-Marcellus text-sm">
-        {label} <span className="text-red-500 text-sm">*</span>
+      <label className="text-sm">
+        {label}{" "}
+        <span
+          className={`${
+            name !== "date" && name !== "venue" ? "text-red-500" : "hidden"
+          } text-sm`}
+        >
+          *
+        </span>
       </label>
       <input
         type={type}
         placeholder={placeholder}
         {...register(name, {
           // valueAsNumber,
-          required: `${label} is required`,
+          required:
+            name !== "date" && name !== "venue"
+              ? `${label} is required`
+              : false,
           pattern: patternValidate(),
         })}
-        className="border border-secondary font-Marcellus px-4 py-2 focus:outline-none focus:border-gray-400"
+        className="border border-gray-600 text-black px-4 py-2 focus:outline-none focus:border-orange-600"
       />
       {error && (
         <span className="text-sm text-red-500 font-Manrope">
