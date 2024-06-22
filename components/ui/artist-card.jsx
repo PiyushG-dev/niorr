@@ -7,6 +7,7 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import ShineBorder from "./shine-border";
+import Link from "next/link";
 
 const ArtistCard = ({ card, name, youtube, spotify, instagram }) => {
   return (
@@ -19,11 +20,23 @@ const ArtistCard = ({ card, name, youtube, spotify, instagram }) => {
       >
         <Image src={card} className="rounded-md" />
       </ShineBorder>
-      <div className="flex gap-5 justify-center">
-        <FontAwesomeIcon icon={faInstagram} className="w-5" />
-        <FontAwesomeIcon icon={faSpotify} className="w-5" />
-        <FontAwesomeIcon icon={faYoutube} className="w-6" />
-      </div>
+      <ul className="flex gap-5 justify-center">
+        <li>
+          <Link href={instagram}>
+            <FontAwesomeIcon icon={faInstagram} className="w-5" />
+          </Link>
+        </li>
+        <li>
+          <Link href={spotify}>
+            <FontAwesomeIcon icon={faSpotify} className="w-5" />
+          </Link>
+        </li>
+        <li>
+          <Link href={youtube}>
+            <FontAwesomeIcon icon={faYoutube} className="w-6" />
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };

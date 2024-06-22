@@ -4,6 +4,7 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -16,7 +17,9 @@ const Footer = () => {
         </div>
         <ul className="flex items-center gap-5">
           <li>
-            <FontAwesomeIcon icon={faInstagram} className="w-6" />
+            <Link href="https://www.instagram.com/niorr.in/">
+              <FontAwesomeIcon icon={faInstagram} className="w-6" />
+            </Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faFacebook} className="w-6" />
