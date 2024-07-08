@@ -39,7 +39,7 @@ const Form = () => {
     const templateParams = {
       from_name: data.fullName,
       from_email: data.email,
-      to_name: "kaarwaan events",
+      to_name: "niorr",
       venue: data.venue,
       email: data.email,
       number: data.phoneNumber,
